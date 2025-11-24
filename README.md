@@ -1,44 +1,75 @@
 # 📊 Power BI Sales Analysis Dashboard
 
-## 🚀 Project Overview
-This project analyzes sales performance using Power BI. It includes KPI tracking, trend analysis, product performance breakdown, customer insights, and fully interactive dashboards designed for business decision-making.
+## 🚀 Project Overview  
+This project focuses on analyzing sales performance using **Power BI**.  
+The goal is to help businesses understand key trends in revenue, customer behavior, product performance, and seasonal variations.  
+
+The dashboard provides interactive visuals, slicers, KPIs, and drill-down features that allow stakeholders to make data-driven decisions quickly.
 
 ---
 
-## 🛠 Tools Used
-- Power BI Desktop  
-- Power Query  
-- DAX  
-- Excel / CSV Dataset  
-- Data Modeling (Star Schema)
+## 🛠 Tools Used  
+- **Power BI Desktop**  
+- **Power Query** (Data Cleaning & Transformation)  
+- **DAX** (Measures & Calculations)  
+- **Excel/CSV Dataset**  
+- **Data Modeling (Star Schema)**  
 
 ---
 
-## 📂 Folder Contents
-- **Dataset/** → Cleaned dataset in CSV/XLSX  
-- **PowerBI File/** → .pbix file  
-- **Dashboard-Screenshots/** → Dashboard images  
-- **Insights/** → Summary report  
-- **Docs/** → Data dictionary (optional)
+## 📂 Repository Structure  
+PowerBI-Sales-Analysis/
+│
+├── Dataset/
+│ └── (dataset .xlsx or .csv)
+│
+├── PowerBI File/
+│ └── Sales_Dashboard.pbix
+│
+├── Dashboard-Screenshots/
+│ └── screenshot_1.jpg
+│ └── screenshot_2.jpg
+│
+├── Insights/
+│ └── summary.pdf (optional)
+│
+├── README.md
+│
+├── LICENSE
+└── .gitignore
+
 
 ---
 
-## 📈 Dashboard Highlight Features
-- KPI cards: Total Revenue, Total Profit, Return Count  
-- Year selector slicers  
-- Product category performance table  
-- Region-wise revenue map  
-- State-wise transactions tree map  
-- Month-on-month growth analysis using DAX
+## 📈 Dashboard Features  
+### **✨ Interactive KPIs**
+- Total Revenue  
+- Total Customers  
+- Average Order Value  
+- Profit Margin  
+
+### **📊 Visualizations Included**
+- Revenue trend line chart (Monthly/Yearly)  
+- Category-wise and product-wise performance  
+- Region & state-wise transactions  
+- Top 5 & bottom 5 products  
+- Slicers: Category, State, Customer Segment, Date  
+
+### **🧭 Data Model (Star Schema)**
+- **Fact Table:** Sales  
+- **Dimension Tables:** Products, Customers, Calendar, Region  
 
 ---
 
-## 🧮 Key DAX Measures
+## 🧮 Key DAX Measures  
+```DAX
+Total Sales = SUM(Sales[Sales Amount])
 
-Total Sales = SUM(Sales[SalesAmount])
+Total Quantity = SUM(Sales[Quantity])
 
-Total Profit = SUM(Sales[Profit])
+Average Order Value = DIVIDE([Total Sales], [Total Orders])
 
-Profit Margin = DIVIDE([Total Profit], [Total Sales])
+Sales YoY% = 
+DIVIDE([Total Sales] - [Sales LY], [Sales LY])
 
-YOY Growth = CALCULATE([Total Sales], DATEADD(Sales[Date], -1, YEAR))
+🖼 Dashboard Preview
