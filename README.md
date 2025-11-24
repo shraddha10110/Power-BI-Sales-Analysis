@@ -53,4 +53,4 @@ Sales YoY% =
 DIVIDE([Total Sales] - [Sales LY], [Sales LY])
  
 ## 🖼 Dashboard Preview
-Dashboard-Screenshots/Screenshot 2025-11-24 173301.png
+https://github.com/shraddha10110/Power-BI-Sales-Analysis/blob/main/Dashboard-Screenshots/Screenshot%202025-11-24%20173301.png
