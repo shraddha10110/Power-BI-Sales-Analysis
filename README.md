@@ -18,7 +18,8 @@ This project analyzes sales performance using Power BI. It includes KPI tracking
 - **Dataset/** → Cleaned dataset in CSV/XLSX  
 - **PowerBI File/** → .pbix file  
 - **Dashboard-Screenshots/** → Dashboard images  
-- 
+- **Insights/** → Summary report  
+- **Docs/** → Data dictionary (optional)
 
 ---
 
@@ -34,11 +35,10 @@ This project analyzes sales performance using Power BI. It includes KPI tracking
 
 ## 🧮 Key DAX Measures
 
-Total Sales = SUM(Sales[Sales Amount])
-Total Quantity = SUM(Sales[Quantity])
-AOV = DIVIDE([Total Sales], [Total Orders])
+Total Sales = SUM(Sales[SalesAmount])
 
+Total Profit = SUM(Sales[Profit])
 
-## 🖼 Dashboard Preview
+Profit Margin = DIVIDE([Total Profit], [Total Sales])
 
-
+YOY Growth = CALCULATE([Total Sales], DATEADD(Sales[Date], -1, YEAR))
