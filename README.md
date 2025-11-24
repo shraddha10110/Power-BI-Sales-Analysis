@@ -1,2 +1,44 @@
-# Power-BI-Sales-Analysis
-Power BI dashboard analyzing sales performance,KPIs,trends, and insights.
+# 📊 Power BI Sales Analysis Dashboard
+
+## 🚀 Project Overview
+This project analyzes sales performance using Power BI. It includes KPI tracking, trend analysis, product performance breakdown, customer insights, and fully interactive dashboards designed for business decision-making.
+
+---
+
+## 🛠 Tools Used
+- Power BI Desktop  
+- Power Query  
+- DAX  
+- Excel / CSV Dataset  
+- Data Modeling (Star Schema)
+
+---
+
+## 📂 Folder Contents
+- **Dataset/** → Cleaned dataset in CSV/XLSX  
+- **PowerBI File/** → .pbix file  
+- **Dashboard-Screenshots/** → Dashboard images  
+- 
+
+---
+
+## 📈 Dashboard Highlight Features
+- KPI cards: Total Revenue, Total Profit, Return Count  
+- Year selector slicers  
+- Product category performance table  
+- Region-wise revenue map  
+- State-wise transactions tree map  
+- Month-on-month growth analysis using DAX
+
+---
+
+## 🧮 Key DAX Measures
+
+Total Sales = SUM(Sales[Sales Amount])
+Total Quantity = SUM(Sales[Quantity])
+AOV = DIVIDE([Total Sales], [Total Orders])
+
+
+## 🖼 Dashboard Preview
+
+
